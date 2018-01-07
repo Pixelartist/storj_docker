@@ -7,7 +7,7 @@ RUN apt-get -y install build-essential apt-utils git python nano curl wget
 RUN wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 RUN exec bash
 RUN nvm install --lts
-RUN npm install --global storjshare-daemon
+RUN npm install --global storjshare-daemon --unsafe-perm
 RUN npm cache clean
 
 EXPOSE 4000
